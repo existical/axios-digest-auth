@@ -1,8 +1,8 @@
 {
   "name": "@acidemic/axios-digest-auth",
   "description": "axios-like http digest auth",
-  "version": "0.9.1",
-  "homepage": "https://github.com/mhoc/axios-digest-auth",
+  "version": "0.9.4",
+  "homepage": "https://github.com/existical/axios-digest-auth.git",
   "license": "MIT",
   "main": "./dist",
   "scripts": {
