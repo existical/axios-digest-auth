@@ -31,7 +31,7 @@ export default class AxiosDigestAuth {
     this.username = username;
   }
 
-  public async request(opts: axios.AxiosRequestConfig): Promise<axios.AxiosResponse> {
+  public async request<T = any>(opts: axios.AxiosRequestConfig<T>): Promise<axios.AxiosResponse<T>> {
     try {
       return await this.axios.request(opts);
     } catch (resp1: any) {

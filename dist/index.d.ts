@@ -19,5 +19,5 @@ export default class AxiosDigestAuth {
     private readonly password;
     private readonly username;
     constructor({ axios: axiosInst, password, username }: AxiosDigestAuthOpts);
-    request(opts: axios.AxiosRequestConfig): Promise<axios.AxiosResponse>;
+    request<T = any>(opts: axios.AxiosRequestConfig<T>): Promise<axios.AxiosResponse<T>>;
 }

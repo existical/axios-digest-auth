@@ -11,6 +11,7 @@ This is fork of [@mhoc/axios-digest-auth](https://github.com/mhoc/axios-digest-a
 
 This improved version of the package adds support for the following:
 * returns 'opaque' value from the server as part of the response headers (see [RFC 7616](https://httpwg.org/specs/rfc7616.html))
+* added generic for request data
 
 
 ### Installation
