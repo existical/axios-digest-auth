@@ -1,6 +1,6 @@
-# @acidemic/axios-digest-auth
+# axios-digest-auth
 
-### Overview
+## Overview
 
 A library which implements HTTP digest authentication in a manner which should be familiar to any 
 project which also uses Axios. Can be used in both Node.js and browser environments.
