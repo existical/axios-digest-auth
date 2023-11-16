@@ -47,13 +47,15 @@ export default class AxiosDigestAuth {
       const cnonce = crypto.randomBytes(24).toString('hex');
       const realm = authDetails.find((el: any) => el[0].toLowerCase().indexOf("realm") > -1)[1].replace(/"/g, '');
       const nonce = authDetails.find((el: any) => el[0].toLowerCase().indexOf("nonce") > -1)[1].replace(/"/g, '');
-      const ha1 = crypto.createHash('md5').update(`${this.username}:${realm}:${this.password}`).digest('hex');
+      const opaque = authDetails.find((el: any) => el[0].toLowerCase().indexOf("opaque") > -1)[1].replace(/"/g, '');
+      const qop = authDetails.find((el: any) => el[0].toLowerCase().indexOf("qop") > -1)[1].replace(/"/g, '');
+			const ha1 = crypto.createHash('md5').update(`${this.username}:${realm}:${this.password}`).digest('hex');
       const path = url.parse(opts.url!).pathname;
       const ha2 = crypto.createHash('md5').update(`${opts.method ?? "GET"}:${path}`).digest('hex');
       const response = crypto.createHash('md5').update(`${ha1}:${nonce}:${nonceCount}:${cnonce}:auth:${ha2}`).digest('hex');
       const authorization = `Digest username="${this.username}",realm="${realm}",` +
         `nonce="${nonce}",uri="${path}",qop="auth",algorithm="MD5",` +
-        `response="${response}",nc="${nonceCount}",cnonce="${cnonce}"`;
+        `response="${response}",opaque="${opaque}",qop="${qop}",nc="${nonceCount}",cnonce="${cnonce}"`;
       if (opts.headers) {
         opts.headers["authorization"] = authorization;
       } else {

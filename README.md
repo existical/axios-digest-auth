@@ -7,7 +7,7 @@ A library which implements HTTP digest authentication in a manner which should b
 project which also uses Axios.
 
 ```
-$ npm i @mhoc/axios-digest-auth
+$ npm i @acidemic/axios-digest-auth
 ```
 
 Check out [the documentation site](https://axios-digest-auth.mhoc.co) for more information 

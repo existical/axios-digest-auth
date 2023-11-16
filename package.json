@@ -1,12 +1,12 @@
 {
-  "name": "@mhoc/axios-digest-auth",
+  "name": "@acidemic/axios-digest-auth",
   "description": "axios-like http digest auth",
-  "version": "0.8.0",
+  "version": "0.9.1",
   "homepage": "https://github.com/mhoc/axios-digest-auth",
   "license": "MIT",
   "main": "./dist",
   "scripts": {
-    "build": "./node_modules/.bin/tsc",
+    "build": "tsc",
     "test": "tsc && mocha",
     "docs:serve": "cd docs && mkdocs serve"
   },
