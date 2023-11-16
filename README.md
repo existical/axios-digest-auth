@@ -60,7 +60,7 @@ const options: AxiosDigestAuthOpts = {
 const axiosDigestAuthInst = new AxiosDigestAuth(options);
 ```
 
-* => ==AxiosDigestAuthOpts==: input object (see below)
+* => **AxiosDigestAuthOpts**: input object (see below)
 
 
 ### request()
@@ -82,8 +82,8 @@ const ExecuteMyRequest = async () => {
 
 Executes a request. The signature of this function is identical to Axios's own request method.
 
-* => ==axios.AxiosRequestConfig==: refer to the [Axios documentation](https://github.com/axios/axios#request-config) for more information on this type.
-* <= ==axios.AxiosResponse==: refer to the [Axios documentation](https://github.com/axios/axios#response-schema) for more information on this type.
+* => **axios.AxiosRequestConfig**: refer to the [Axios documentation](https://github.com/axios/axios#request-config) for more information on this type.
+* <= **axios.AxiosResponse**: refer to the [Axios documentation](https://github.com/axios/axios#response-schema) for more information on this type.
 
 
 ### interface AxiosDigestAuthOpts
@@ -92,11 +92,11 @@ Executes a request. The signature of this function is identical to Axios's own r
 import { AxiosDigestAuthOpts } from "@acidemic/axios-digest-auth";
 ```
 
-* ==axios (axios.Axios | undefined)==: Optionally provide an axios object with which requests are made. If this is not provided, axios-digest-auth will create one for you by simply using the axios library default export, with no configuration.
+* **axios (axios.Axios | undefined)**: Optionally provide an axios object with which requests are made. If this is not provided, axios-digest-auth will create one for you by simply using the axios library default export, with no configuration.
 
-* ==password (string)==: the HTTP digest authentication password to use.
+* **password (string)**: the HTTP digest authentication password to use.
 
-* ==username (string)==: the HTTP digest authentication username to use.
+* **username (string)**: the HTTP digest authentication username to use.
 
 
 Check out [the documentation site](https://axios-digest-auth.mhoc.co) for more information 
