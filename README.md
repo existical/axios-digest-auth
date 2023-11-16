@@ -38,6 +38,7 @@ const MakeARequest = async () => {
 }
 ```
 
+
 ## API
 
 ### class AxiosDigestAuth
@@ -101,6 +102,7 @@ import { AxiosDigestAuthOpts } from "@acidemic/axios-digest-auth";
 
 Check out [the documentation site](https://axios-digest-auth.mhoc.co) for more information 
 on usage.
+
 
 ## Usage in the Browser with Webpack and Typescript
 
