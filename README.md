@@ -94,9 +94,7 @@ import { AxiosDigestAuthOpts } from "@acidemic/axios-digest-auth";
 ```
 
 * **axios (axios.Axios | undefined)**: Optionally provide an axios object with which requests are made. If this is not provided, axios-digest-auth will create one for you by simply using the axios library default export, with no configuration.
-
 * **password (string)**: the HTTP digest authentication password to use.
-
 * **username (string)**: the HTTP digest authentication username to use.
 
 
