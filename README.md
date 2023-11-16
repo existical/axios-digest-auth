@@ -101,3 +101,29 @@ import { AxiosDigestAuthOpts } from "@acidemic/axios-digest-auth";
 
 Check out [the documentation site](https://axios-digest-auth.mhoc.co) for more information 
 on usage.
+
+## Usage in the Browser with Webpack and Typescript
+
+This module utilizes certain built-in Node.js modules. To use it in a browser, you'll need to include a polyfill for each of these modules.
+
+Firstly, install all necessary modules by executing the following command in your terminal:
+
+```sh
+npm install crypto-browserify buffer stream-browserify url
+```
+
+Next, add a fallback in your webpack configuration file (typically named webpack.config.js):
+
+```js
+module.exports = {
+  //...
+  resolve: {
+    fallback: {
+	  "crypto": require.resolve("crypto-browserify"),
+      "buffer": require.resolve("buffer/"),
+      "stream": require.resolve("stream-browserify"),
+      "url": require.resolve("url/")
+    },
+  },
+};
+```
